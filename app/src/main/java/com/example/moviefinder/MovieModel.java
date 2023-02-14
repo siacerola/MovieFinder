@@ -9,6 +9,7 @@ public class MovieModel {
     private String Year;
     private String Runtime;
     private String Director;
+    private String Plot;
     private String imdbRating;
     private String Poster;
     public MovieModel(JSONObject responseObj) {
@@ -17,6 +18,7 @@ public class MovieModel {
             if (responseObj.has("Year")) setTitle(responseObj.getString("Year"));
             if (responseObj.has("Runtime")) setTitle(responseObj.getString("Runtime"));
             if (responseObj.has("Director")) setTitle(responseObj.getString("Director"));
+            if (responseObj.has("Plot")) setTitle(responseObj.getString("Plot"));
             if (responseObj.has("imdbRating")) setTitle(responseObj.getString("imdbRating"));
             if (responseObj.has("Poster")) setTitle(responseObj.getString("Poster"));
         } catch (JSONException e){
@@ -54,6 +56,14 @@ public class MovieModel {
 
     public void setDirector(String director) {
         this.Director = director;
+    }
+
+    public String getPlot() {
+        return Plot;
+    }
+
+    public void setPlot(String plot) {
+        Plot = plot;
     }
 
     public String getImdbRating() {
