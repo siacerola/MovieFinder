@@ -14,9 +14,6 @@
         <activity
             android:name=".ApiListActivity"
             android:exported="false" />
-        <activity
-            android:name=".ItemMovieListActivity"
-            android:exported="true" />
     </application>
 
 </manifest>
