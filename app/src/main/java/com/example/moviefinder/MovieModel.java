@@ -15,12 +15,12 @@ public class MovieModel {
     public MovieModel(JSONObject responseObj) {
         try{
             if (responseObj.has("Title")) setTitle(responseObj.getString("Title"));
-            if (responseObj.has("Year")) setTitle(responseObj.getString("Year"));
-            if (responseObj.has("Runtime")) setTitle(responseObj.getString("Runtime"));
-            if (responseObj.has("Director")) setTitle(responseObj.getString("Director"));
-            if (responseObj.has("Plot")) setTitle(responseObj.getString("Plot"));
-            if (responseObj.has("imdbRating")) setTitle(responseObj.getString("imdbRating"));
-            if (responseObj.has("Poster")) setTitle(responseObj.getString("Poster"));
+            if (responseObj.has("Year")) setYear(responseObj.getString("Year"));
+            if (responseObj.has("Runtime")) setRuntime(responseObj.getString("Runtime"));
+            if (responseObj.has("Director")) setDirector(responseObj.getString("Director"));
+            if (responseObj.has("Plot")) setPlot(responseObj.getString("Plot"));
+            if (responseObj.has("imdbRating")) setImdbRating(responseObj.getString("imdbRating"));
+            if (responseObj.has("Poster")) setPoster(responseObj.getString("Poster"));
         } catch (JSONException e){
             e.printStackTrace();
         }
@@ -63,7 +63,7 @@ public class MovieModel {
     }
 
     public void setPlot(String plot) {
-        Plot = plot;
+        this.Plot = plot;
     }
 
     public String getImdbRating() {
