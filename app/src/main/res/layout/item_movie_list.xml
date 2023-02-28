@@ -8,6 +8,14 @@
             name="movieModel"
             type="com.example.moviefinder.MovieModel" />
 
+        <variable
+            name="digimonModel"
+            type="com.example.moviefinder.DigimonModel" />
+
+        <variable
+            name="dropRate"
+            type="com.example.moviefinder.ItemModel.DropRate" />
+
     </data>
 
     <LinearLayout
@@ -32,19 +40,22 @@
                 android:layout_marginStart="5dp"
                 android:textSize="10pt"
                 android:textStyle="bold"
-                tools:text="title"/>
+                tools:text="title"
+                android:text="@{@string/item_name.concat(dropRate.monster)}"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                tools:text="Runtime"/>
+                tools:text="Runtime"
+                android:text="@{@string/item_element.concat(dropRate.element)}"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                tools:text="Rating"/>
+                tools:text="Rating"
+                android:text="@{@string/item_dropRate.concat(dropRate.rate)}"/>
         </LinearLayout>
 
     </LinearLayout>
