@@ -43,7 +43,7 @@ public class BaseRecyclerAdapter<M> extends RecyclerView.Adapter<BaseRecyclerAda
     }
     @NonNull
     @Override
-    public BaseRecyclerAdapter.BaseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BaseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(
                 getLayoutRes(),
                 parent,
@@ -53,7 +53,7 @@ public class BaseRecyclerAdapter<M> extends RecyclerView.Adapter<BaseRecyclerAda
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BaseRecyclerAdapter.BaseViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
 
         M m = getMainData().get(position);
         listener.onBindView(holder,m);
